@@ -1,4 +1,4 @@
-# What you should learn from this project #
+# What I should learn from this Project #
 Why C programming is awesome (don’t forget to tweet today, with the hashtag #cisfun :))
 
 Who invented C
