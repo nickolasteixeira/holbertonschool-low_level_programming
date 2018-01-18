@@ -8,18 +8,22 @@
 
 int main(void)
 {
-	int i;
+	char c;
 
-	for (i = 97; i < 101; ++i)
-		printf("%c", i);
+	for (c = 'a'; c <= 'z'; ++c)
+	{
+		if (c == 'q')
+		{
+		} 
+		else if (c == 'e')
+		{
+		}
+		else
+		{
+			putchar(c);
+		}
+	}
 
-	for (i = 102; i < 113; ++i)
-		printf("%c", i);
-
-	for (i = 114; i < 122; ++i)
-		printf("%c", i);
-
-	printf("\n");
-
+	putchar('\n');
 	return (0);
 }
