@@ -3,20 +3,26 @@
 /**
  * main - prints all possible combinations of single-digit numbers with commas
  *
+ * Description: Use the ASCII table for number reference
+ *
  * Return: 0
  */
 
 int main(void)
 {
-	int i;
-
-	for (i = 48; i <= 56; ++i)
+	int i = '0';
+	/* 48 to 56 */
+	while (i <= '9')
 	{
 		putchar(i);
-		putchar(',');
-		putchar(' ');
+		if (i < '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
+		++i;
 	}
-	putchar(i);
+
 	putchar('\n');
 
 	return (0);
