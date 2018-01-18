@@ -2,7 +2,7 @@
 
 
 /**
- * main - prints alphabet in lowercase then uppercase 
+ * main - prints alphabet in lowercase then uppercase
  *
  * Return: 0
  */
