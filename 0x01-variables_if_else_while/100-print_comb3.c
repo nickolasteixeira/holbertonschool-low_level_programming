@@ -20,7 +20,7 @@ int main(void)
 				putchar(k);
 
 				if (i == '8' && k == '9')
-				{	
+				{
 					break;
 				}
 
