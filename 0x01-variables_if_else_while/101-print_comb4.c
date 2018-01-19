@@ -14,22 +14,19 @@ int main(void)
 	{
 		for (j = '0'; j <= '9'; ++j)
 		{
-			if (j > i)
+			for (k = '0'; k <= '9'; ++k)
 			{
-				for (k = '0'; k <= '9'; ++k)
+				if (j > i && k > j)
 				{
-					if (k > j)
+					putchar(i);
+					putchar(j);
+					putchar(k);
+					if (i == '7' && j == '8' && k == '9')
 					{
-						putchar(i);
-						putchar(j);
-						putchar(k);
-						if (i == '7' && j == '8' && k == '9')
-						{
-							break;
-						}
-						putchar(',');
-						putchar(' ');
+						break;
 					}
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
