@@ -1,3 +1,4 @@
+#include "holberton.h"
 /**
  * _isalpha - checks for alphabetic character
  * @c: the integer to compare
