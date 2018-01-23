@@ -1,5 +1,6 @@
 /**
- * 4-isalpha.c - checks for alphabetic character
+ * _isalpha - checks for alphabetic character
+ * @c: the integer to compare
  *
  * Description: Returns 1 if c is a letter, lowercase or uppercase
  * Return: 1
