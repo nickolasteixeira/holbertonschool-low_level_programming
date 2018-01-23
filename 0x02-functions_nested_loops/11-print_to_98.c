@@ -47,7 +47,6 @@ void print_over_98(int x)
 
 void print_to_98(int min)
 {
-	int i;
 
 	if (min <= 98)
 	{
