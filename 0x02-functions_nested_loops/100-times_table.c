@@ -2,50 +2,50 @@
 
 /**
  * print_digits - prints out formating based off of digit value
- * @x: rows
- * @y: column
+ * @a: rows
+ * @b: column
  *
  * Return: void
  */
-void print_digits(int x, int y)
+void print_digits(int a, int b)
 {
-	if ((x * y) > 99)
+	if ((a * b) > 99)
 	{
-		_putchar(((x * y) / 100) + '0');
-		_putchar((((x * y) / 10) % 10) + '0');
-		_putchar(((x * y) % 10) + '0');
+		_putchar(((a * b) / 100) + '0');
+		_putchar((((a * b) / 10) % 10) + '0');
+		_putchar(((a * b) % 10) + '0');
 	}
-	else if (((x * y) < 100) && ((x * y) > 9))
+	else if (((a * b) < 100) && ((a * b) > 9))
 	{
-		_putchar(((x * y) / 10) + '0');
-		_putchar(((x * y) % 10) + '0');
+		_putchar(((a * b) / 10) + '0');
+		_putchar(((a * b) % 10) + '0');
 	}
 	else
 	{
-		_putchar(((x * y) % 10) + '0');
+		_putchar(((a * b) % 10) + '0');
 	}
 }
 
 /**
  * print_spaces - helper function, prints out number of spaces based on x * y
- * @x: rows
- * @y: column
+ * @a: rows
+ * @b: column
  *
  * Return: void
  */
-void print_spaces(int x, int y)
+void print_spaces(int a, int b)
 {
 
-	if ((x * y) >= 100)
+	if ((a * b) >= 100)
 	{
 		_putchar(' ');
 	}
-	else if ((x * y) < 100 && (x * y) > 9)
+	else if ((a * b) < 100 && (a * b) > 9)
 	{
 		_putchar(' ');
 		_putchar(' ');
 	}
-	else if ((x * y) < 10)
+	else if ((a * b) < 10)
 	{
 		_putchar(' ');
 		_putchar(' ');
