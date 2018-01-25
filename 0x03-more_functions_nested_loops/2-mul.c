@@ -1,3 +1,5 @@
+#include "holberton.h"
+
 /**
  * mul - returns the product of a * b
  * @a: one integer to multipy
@@ -8,7 +10,5 @@
 
 int mul(int a, int b)
 {
-	int c = a * b;
-
 	return (c);
 }
