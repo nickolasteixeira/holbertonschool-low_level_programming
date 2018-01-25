@@ -10,14 +10,16 @@ int main(void)
 {
 	long int i = 1, a = 0, b = 1, c = 1;
 
-	while (i <= 50)
+	while (i < 50)
 	{
-		printf("%ld, \n", c);
+		printf("%ld, ", c);
 		c = a + b;
 		a = b;
 		b = c;
 		++i;
 	}
+
+	printf("%ld\n", c);
 
 	return (0);
 }
