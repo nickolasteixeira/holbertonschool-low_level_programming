@@ -1,4 +1,3 @@
-#include "holberton.h"
 #include "_putchar.c"
 
 /**
