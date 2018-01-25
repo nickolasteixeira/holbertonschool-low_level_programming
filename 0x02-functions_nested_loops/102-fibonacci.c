@@ -12,7 +12,7 @@ int main(void)
 
 	while (i <= 50)
 	{
-		printf("%ld\n", c);
+		printf("%ld,\n", c);
 		c = a + b;
 		a = b;
 		b = c;
