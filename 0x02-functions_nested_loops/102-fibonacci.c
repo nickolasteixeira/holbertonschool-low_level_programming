@@ -12,10 +12,10 @@ int main(void)
 
 	while (i < 50)
 	{
-		printf("%ld, ", c);
 		c = a + b;
 		a = b;
 		b = c;
+		printf("%ld, ", c);
 		++i;
 	}
 
