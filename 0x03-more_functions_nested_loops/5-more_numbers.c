@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include "_putchar.c"
 
 /**
  * more_numbers - prints 10 times the numbers from 0 to 14
