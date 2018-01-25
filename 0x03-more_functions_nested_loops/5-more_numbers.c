@@ -8,11 +8,10 @@
 void more_numbers(void)
 {
 	int i = 1;
-	int j;
+	int j = 0;
 
 	while (i <= 10)
 	{
-		j = 0;
 		while (j <= 14)
 		{
 			if (j > 10)
@@ -21,6 +20,7 @@ void more_numbers(void)
 			++j;
 		}
 		++i;
+		j = 0;
 		_putchar('\n');
 	}
 }
