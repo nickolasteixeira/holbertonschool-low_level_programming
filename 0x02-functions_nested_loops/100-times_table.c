@@ -5,7 +5,7 @@
  * @a: rows
  * @b: column
  *
- *
+ * Return: void
  */
 void print_digits(int a, int b)
 {
@@ -31,7 +31,7 @@ void print_digits(int a, int b)
  * @m: rows
  * @n: column
  *
- *
+ * Return: void
  */
 void print_spaces(int m, int n)
 {
@@ -58,14 +58,15 @@ void print_spaces(int m, int n)
  * print_times_table - prints multiplication tables between 1 and 15
  * @n: multiplication number to use to print table
  *
- *
+ * Return: void
  */
 void print_times_table(int n)
 {
-	if (n < 0 || n > 15)
-		return;
 
 	int x, y;
+
+	if (n < 0 || n > 15)
+		return;
 
 	x = 0;
 
