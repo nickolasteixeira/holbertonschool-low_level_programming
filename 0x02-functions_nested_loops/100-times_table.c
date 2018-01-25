@@ -1,6 +1,5 @@
 #include "holberton.h"
 
-
 /**
  * print_digits - prints out formating based off of digit value
  * @x: rows
