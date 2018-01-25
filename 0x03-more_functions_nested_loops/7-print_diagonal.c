@@ -1,3 +1,5 @@
+#include "holberton.h"
+
 /**
  * print_diagonal - draws a diagonal line on the terminal
  * @n: number of diagonals you want to draw
@@ -8,6 +10,12 @@
 void print_diagonal(int n)
 {
 	int i, j;
+
+	if (n <= 0)
+	{
+		_putchar('\n');
+		return;
+	}
 
 	i = 1;
 
