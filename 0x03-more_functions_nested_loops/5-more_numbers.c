@@ -5,11 +5,9 @@
  *
  * Return: void
  */
-
 void more_numbers(void)
 {
 	int i = 1;
-
 	int j;
 
 	while (i <= 10)
