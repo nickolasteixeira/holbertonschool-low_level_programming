@@ -24,33 +24,34 @@ void print_digits(int a, int b)
 	{
 		_putchar(((a * b) % 10) + '0');
 	}
-}
 
+}
 /**
  * print_spaces - helper function, prints out number of spaces based on x * y
- * @a: rows
- * @b: column
+ * @m: rows
+ * @n: column
  *
  *
  */
-void print_spaces(int a, int b)
+void print_spaces(int m, int n)
 {
 
-	if ((a * b) >= 100)
+	if ((m * n) >= 100)
 	{
 		_putchar(' ');
 	}
-	else if ((a * b) < 100 && (a * b) > 9)
+	else if ((m * n) < 100 && (m * n) > 9)
 	{
 		_putchar(' ');
 		_putchar(' ');
 	}
-	else if ((a * b) < 10)
+	else if ((m * n) < 10)
 	{
 		_putchar(' ');
 		_putchar(' ');
 		_putchar(' ');
 	}
+
 }
 
 /**
@@ -89,4 +90,5 @@ void print_times_table(int n)
 		}
 		++x;
 	}
+
 }
