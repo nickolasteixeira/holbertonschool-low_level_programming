@@ -3,7 +3,7 @@
 /**
  * print_triangle - prints a triangle to the output
  * @size: size of triangle to print
- * 
+ *
  * Return: void
  */
 
@@ -11,29 +11,22 @@ void print_triangle(int size)
 {
 	int i, j, m;
 
+	i = 1;
+	m = size;
 	while (i <= size)
 	{
 		j = 1;
-		m = size;
 		while (j <= size)
 		{
-			if (j == size)
-			{
+			if (j >= m)
 				_putchar('#');
-				_putchar('\n');
-			}
-			else if (j >= m)
-			{
-				_putchar('#');
-			}
 			else
-			{	
 				_putchar(' ');
-			}
 
-			--m;
 			++j;
 		}
+		--m;
 		++i;
+		_putchar('\n');
 	}
 }
