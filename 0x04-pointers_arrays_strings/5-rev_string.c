@@ -11,12 +11,11 @@ int _strlen(char *s);
  */
 void rev_string(char *s)
 {
-	int i, length;
-
-	length = _strlen(s);
-
+	int i, length, j;
 	char copy[length];
-	int j = 0;
+
+	j = 0;
+	length = _strlen(s);
 	--length;
 	for (i = length; i >= 0; --i)
 	{
