@@ -1,6 +1,5 @@
 #include "holberton.h"
 int _strlen(char *s);
-#include <stdio.h>
 
 /**
  * rev_string - prints a string in reverse order
@@ -11,18 +10,15 @@ int _strlen(char *s);
  */
 void rev_string(char *s)
 {
-	int i, length, j;
-
-	length = _strlen(s);
-
+	int i, j;
+	int length = _strlen(s);
 	char copy[length];
 
 	j = 0;
-	--length;
 	for (i = length; i >= 0; --i)
 	{
 		copy[j] = s[i];
-		j++;
+		++j;
 	}
 
 	for (i = 0; i <= length; ++i)
@@ -49,6 +45,7 @@ int _strlen(char *s)
 		counter++;
 		i++;
 	}
+	--counter;
 
 	return (counter);
 }
