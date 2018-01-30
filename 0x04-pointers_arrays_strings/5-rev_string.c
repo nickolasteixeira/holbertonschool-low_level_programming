@@ -1,25 +1,34 @@
 #include "holberton.h"
 int _strlen(char *s);
 #include <stdio.h>
+
 /**
- * print_rev - prints a string in reverse order
+ * rev_string - prints a string in reverse order
  * @s: the string to count down from
  *
+ * Description: Reverses the string in memory
  * Return: void
  */
-
 void rev_string(char *s)
 {
-	int i, length;	
+	int i, length;
+
 	length = _strlen(s);
 
-	char copy[length]; 
-
+	char copy[length];
+	int j = 0;
+	--length;
 	for (i = length; i >= 0; --i)
 	{
-		*s = copy[i];
-		--s;
+		copy[j] = s[i];
+		j++;
 	}
+
+	for (i = 0; i <= length; ++i)
+	{
+		s[i] = copy[i];
+	}
+	s[i] = '\0';
 }
 
 /**
@@ -33,10 +42,9 @@ int _strlen(char *s)
 	int counter = 0;
 	int i = 0;
 
-	while (*s != '\0')
+	while (s[i] != '\0')
 	{
 		counter++;
-		*s++;
 		i++;
 	}
 
