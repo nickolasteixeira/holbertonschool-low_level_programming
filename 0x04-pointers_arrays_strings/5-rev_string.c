@@ -28,6 +28,7 @@ void rev_string(char *s)
 	{
 		s[i] = copy[i];
 	}
+	++i;
 	s[i] = '\0';
 }
 
