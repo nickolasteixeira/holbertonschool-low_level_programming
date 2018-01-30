@@ -1,5 +1,4 @@
 #include "holberton.h"
-int _strlen(char *s);
 
 /**
  * rev_string - prints a string in reverse order
