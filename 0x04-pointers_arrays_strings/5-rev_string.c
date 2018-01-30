@@ -28,24 +28,19 @@ int _strlen(char *s)
  */
 void rev_string(char *s)
 {
+
 	int i, j;
 	int length = _strlen(s);
-	char place_holder[length + 1];
+	char place_holder;
 
-	i = length;
-	j = 0;
-	while (i >= 0)
-	{
-		place_holder[j] = s[i];
-		--i;
-		++j;
-	}
-
+	j = length;
 	i = 0;
-	while (i <= length)
+	while (j >= i)
 	{
-		s[i] = place_holder[i];
+		place_holder = s[i];
+		s[i] = s[j];
+		s[j] = place_holder;
+		--j;
 		++i;
 	}
 }
-
