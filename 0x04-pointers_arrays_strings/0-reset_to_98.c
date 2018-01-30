@@ -2,7 +2,7 @@
 
 /**
  * reset_to_98 - resets the parameter's value 98 in memory
- * @n: integer to change 
+ * @n: integer to change
  *
  * Return: void
  */
