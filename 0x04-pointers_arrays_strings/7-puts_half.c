@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * _strlen - returns the length of the string in the parameter
  * @s: the string
@@ -29,14 +30,23 @@ void puts_half(char *str)
 	int half_length = length;
 
 	if (length % 2 == 1)
+	{
 		half_length = (length - 1) / 2;
+		while (half_length < length - 1)
+		{
+			_putchar(str[half_length + 1]);
+			++half_length;
+		}
+	}
 	else
+	{
 		half_length /= 2;
 
-	while (half_length < length)
-	{
-		_putchar(str[half_length]);
-		++half_length;
+		while (half_length < length)
+		{
+			_putchar(str[half_length]);
+			++half_length;
+		}
 	}
 	_putchar('\n');
 }
