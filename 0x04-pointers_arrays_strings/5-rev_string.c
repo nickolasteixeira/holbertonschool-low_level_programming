@@ -12,10 +12,12 @@ int _strlen(char *s);
 void rev_string(char *s)
 {
 	int i, length, j;
+
+	length = _strlen(s);
+
 	char copy[length];
 
 	j = 0;
-	length = _strlen(s);
 	--length;
 	for (i = length; i >= 0; --i)
 	{
