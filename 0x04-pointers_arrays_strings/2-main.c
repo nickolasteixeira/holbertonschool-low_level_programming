@@ -9,10 +9,13 @@
 int main(void)
 {
   char *str;
-  int len;
+  char *str1;
+  int len, len1;
 
   str = "Holberton!";
+  str1 = "Nick";
   len = _strlen(str);
-  printf("%d\n", len);
+  len1 = _strlen(str1);
+  printf("%d\n%d\n", len, len1);
   return (0);
 }
