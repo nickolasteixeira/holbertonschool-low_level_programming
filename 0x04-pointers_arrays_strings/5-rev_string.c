@@ -31,19 +31,23 @@ void rev_string(char *s)
 {
 	int i, j;
 	int length = _strlen(s);
-	char copy[length];
 
+	char place_holder[length];
+
+	i = length;
 	j = 0;
-	for (i = length; i >= 0; --i)
+	while (i >= 0)
 	{
-		copy[j] = s[i];
+		place_holder[j] = s[i];
+		--i;
 		++j;
 	}
 
-	for (i = 0; i <= length; ++i)
+	i = 0;
+	while (i <= length)
 	{
-		s[i] = copy[i];
+		s[i] = place_holder[i];
+		++i;
 	}
-	++i;
-	s[i] = '\0';
 }
+
