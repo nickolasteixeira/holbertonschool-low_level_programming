@@ -43,6 +43,7 @@ char *_strncat(char *dest, char *src, int n)
 		++i;
 		++src_length;
 	}
+	++src_length;
 	dest[src_length] = '\0';
 	return (dest);
 }
