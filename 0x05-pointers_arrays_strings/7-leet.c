@@ -15,7 +15,7 @@ char *leet(char *s)
 	while (s[i] != '\0')
 	{
 		j = 0;
-		while (cases[j] <= 10)
+		while (j < 10)
 		{
 			if (s[i] == cases[j])
 				s[i] = replacement[j];
