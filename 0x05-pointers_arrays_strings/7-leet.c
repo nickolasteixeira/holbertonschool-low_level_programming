@@ -1,6 +1,5 @@
 #include "holberton.h"
 
-
 /**
  * *leet - encodes a string to 1337
  * @s: the string to encode
