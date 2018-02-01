@@ -28,19 +28,14 @@ int _strlen(char *s)
 char *_strcat(char *dest, char *src)
 {
 	int dest_length = _strlen(dest);
-	int src_length = _strlen(src);
-	int new_length = dest_length + src_length;
 	int i;
 
 	i = 0;
-	--src_length;
-	while (src_length < new_length)
+	while (src[i] != '\0')
 	{
-		dest[src_length] = src[i];
+		dest[dest_length + i] = src[i];
 		++i;
-		++src_length;
 	}
-	++src_length;
-	dest[src_length] = '\0';
+	dest[dest_length + i] = '\0';
 	return (dest);
 }
