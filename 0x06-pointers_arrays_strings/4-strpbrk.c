@@ -8,6 +8,7 @@
  */
 int contains(char x, char *acc)
 {
+	unsigned int i = 0;
 	while (*acc != '\0')
 	{
 		if (x == *acc)
@@ -33,7 +34,10 @@ char *_strpbrk(char *s, char *accept)
 	while (*s)
 	{
 		if (contains(*s, accept))
+		{
+			s = &*(s);
 			return (s);
+		}
 		++s;
 	}
 
