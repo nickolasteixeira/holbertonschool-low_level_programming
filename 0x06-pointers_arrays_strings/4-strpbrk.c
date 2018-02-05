@@ -13,7 +13,7 @@ char *_strpbrk(char *s, char *accept)
 	unsigned int i, j;
 
 	i = 0;
-	while (*s)
+	while (s[i] != '\0')
 	{
 		j = 0;
 		while (accept[j] != '\0')
@@ -25,12 +25,8 @@ char *_strpbrk(char *s, char *accept)
 			}
 			++j;
 		}
-		++s;
+		++i;
 	}
 
-	if (*s == '\0')
-		return (s);
-
-	s = 0;
-	return (s);
+	return (0);
 }
