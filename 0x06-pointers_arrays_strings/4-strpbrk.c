@@ -1,23 +1,5 @@
 #include "holberton.h"
 /**
- * contains - returns 1 if char is found, 0 if not
- * @x: character to find
- * @acc: string to iterate though
- *
- * Return: 1 if found, 0 if not found
- */
-int contains(char x, char *acc)
-{
-	unsigned int i = 0;
-	while (*acc != '\0')
-	{
-		if (x == *acc)
-			return (1);
-		++acc;
-	}
-	return (0);
-}
-/**
  * _strpbrk - searches a string for a character, then
  * returns the pointer once the character is found
  * @s: the string to search
@@ -33,10 +15,15 @@ char *_strpbrk(char *s, char *accept)
 	i = 0;
 	while (*s)
 	{
-		if (contains(*s, accept))
+		j = 0;
+		while (accept[j] != '\0')
 		{
-			s = &*(s);
-			return (s);
+			if (s[i] == accept[j])
+			{
+				s = &s[i];
+				return (s);
+			}
+			++j;
 		}
 		++s;
 	}
