@@ -54,8 +54,5 @@ unsigned int _strspn(char *s, char *accept)
 		++i;
 	}
 
-	if (s[slength] == accept[acceptlength])
-		++counter;
-
 	return (counter);
 }
