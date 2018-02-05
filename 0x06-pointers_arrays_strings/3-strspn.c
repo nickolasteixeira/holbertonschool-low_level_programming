@@ -28,27 +28,29 @@ int _strlen(char *s)
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j, counter, slength, acceptlength;
+	unsigned int i, j, k, counter, slength, acceptlength;
 
 	slength = _strlen(s);
 	acceptlength = _strlen(accept);
 	counter = 0;
 	i = 0;
-	while (accept[i] != '\0')
+	while (s[i] != '\0')
 	{
 		j = 0;
-		while (s[j] != '\0')
+		k = 0;
+		while (accept[j] != '\0')
 		{
-			if (accept[i] == s[j])
+			if (accept[j] == s[i])
 			{
 				++counter;
+				k = 1;
 				break;
 			}
 			++j;
 		}
-
-		if (counter == 0)
+		if (k == 0)
 			return (counter);
+
 		++i;
 	}
 
