@@ -1,5 +1,4 @@
 #include "holberton.h"
-#define NULL 0
 /**
  * _strchr - locates the first character in a string
  * and returns a pointer to it
@@ -11,8 +10,6 @@
  */
 char *_strchr(char *s, char c)
 {
-	unsigned int length;
-
 	while (*s != '\0')
 	{
 		if (*s == c)
@@ -23,5 +20,6 @@ char *_strchr(char *s, char c)
 	if (c == '\0')
 		return (s);
 
-	return (NULL);
+	s = 0;
+	return (s);
 }
