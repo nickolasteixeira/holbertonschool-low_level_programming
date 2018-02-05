@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * _strlen - returns the length of the string in the parameter
  * @s: the string
@@ -41,11 +40,11 @@ char *_strstr(char *haystack, char *needle)
 				++count;
 			++j;
 		}
-
 		if (count == length)
+		{
+			haystack = &haystack[i];
 			return (haystack);
-
-		*(++haystack);
+		}
 		++i;
 	}
 
