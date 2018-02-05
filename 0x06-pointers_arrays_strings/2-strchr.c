@@ -32,11 +32,12 @@ char *_strchr(char *s, char c)
 	length = _strlen(s);
 	i = 0;
 
-	while (i <= length)
+	while (i < length)
 	{
 		if (*s == c)
 			return (s);
 		++s;
 	}
 
+	return (0);
 }
