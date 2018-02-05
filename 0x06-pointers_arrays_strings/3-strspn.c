@@ -26,7 +26,7 @@ int contains(char x, char *acc)
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int counter;
+	unsigned int counter = 0;
 
 	while (*s != '\0')
 	{
