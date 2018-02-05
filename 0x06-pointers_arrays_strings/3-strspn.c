@@ -46,6 +46,9 @@ unsigned int _strspn(char *s, char *accept)
 			}
 			++j;
 		}
+
+		if (counter == 0)
+			return (counter);
 		++i;
 	}
 
