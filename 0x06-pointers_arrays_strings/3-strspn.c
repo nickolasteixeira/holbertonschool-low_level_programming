@@ -1,22 +1,5 @@
 #include "holberton.h"
 /**
- * contains - returns 1 if the character is found, 0 if not
- * @x: the character to search for
- * @acc: the string to loop through
- *
- * Return: 1 if the char is found in the string, 0 if not
- */
-int contains(char x, char *acc)
-{
-	while (*acc != '\0')
-	{
-		if (x == *acc)
-			return (1);
-		*acc++;
-	}
-	return (0);
-}
-/**
  * _strspn - gets the length of a prefix substring
  * @s: the string to check accept
  * @accept: the string check against s
@@ -26,16 +9,26 @@ int contains(char x, char *acc)
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int counter = 0;
+	unsigned int count, i, j;
 
-	while (*s != '\0')
+	i = 0;
+	count = 0;
+	while (s[i] != '\0')
 	{
-		if (contains(*s, accept))
-			++counter;
-		else
-			return (counter);
-		*s++;
+		j = 0;
+		while (accept[j] != '\0')
+		{
+			if (s[i] == accept[j])
+			{
+				++count;
+				break;
+			}
+			if (accept[j + 1] == '\0' && s[i] != accept[j])
+				return (count);
+			++j;
+		}
+		++i;
 	}
 
-	return (counter);
+	return (count);
 }
