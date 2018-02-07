@@ -7,7 +7,6 @@
  */
 void _print_rev_recursion(char *s)
 {
-	/* terminating condition */
 	if (*s != '\0')
 	{
 		_print_rev_recursion(s + 1);
