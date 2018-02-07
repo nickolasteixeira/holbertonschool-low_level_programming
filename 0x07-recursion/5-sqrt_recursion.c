@@ -11,7 +11,7 @@ int check_square(int n, int x)
 {
 	if (n == (x * x))
 		return (x);
-	if (x > n)
+	if (x * x > n)
 		return (-1);
 
 	return (check_square(n, x + 1));
@@ -26,12 +26,13 @@ int check_square(int n, int x)
  */
 int _sqrt_recursion(int n)
 {
-	unsigned int i = 0;
 
-	if (i == 1)
+	if (n == 1)
 		return (1);
-	if (i == 0)
+	if (n == 0)
 		return (0);
+	if (n < 1)
+		return (-1);
 
 	return (check_square(n, 1));
 }
