@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * _print_rev_recursion - prints a string in reverse using recursion
- * @s: string to reverse and print
+ * _print_rev_recursion - prints the string in reverse, recursively
+ * @s: string to iterate
  *
  * Return: void
  */
@@ -10,6 +10,6 @@ void _print_rev_recursion(char *s)
 	if (*s != '\0')
 	{
 		_print_rev_recursion(s + 1);
-		putchar(*s);
+		_putchar(*s);
 	}
 }
