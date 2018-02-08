@@ -1,32 +1,27 @@
 #include "holberton.h"
 /**
- * _strlen - returns the length of the string in the parameter
- * @s: the string
+ * _strlen_recursion - returns the length of a string using recursion
+ * @s: string to count
  *
- * Return: length of a string
+ * Return: length of the string
  */
-
-int _strlen(char *s)
+int _strlen_recursion(char *s)
 {
-	int counter = 0;
+	unsigned int counter = 1;
 
-	while (s[counter] != '\0')
-	{
-		counter++;
-	}
-	--counter;
-	return (counter);
+	if (*s == '\0')
+		return (0);
+
+	return (counter + _strlen_recursion(s + 1));
 }
-
 /**
  * check_palindrome - checks if a word/sentence is a palindrome
  * @s: the pointer to the string
  * @length: length of s - 1
- * @x: incrementor variable
  *
  * Return: 1 if palindrome, 0 if not
  */
-int check_palindrome(char *s, int length, int x)
+int check_palindrome(char *s, int length)
 {
 	if (*(s + 1) == '\0')
 		return (1);
@@ -34,7 +29,7 @@ int check_palindrome(char *s, int length, int x)
 	if (*s != *(s + length))
 		return (0);
 
-	return (check_palindrome((s + 1), (length - (++x)), 1));
+	return (check_palindrome(s + 1, length - 2));
 }
 /**
  * is_palindrome - checks to see if a word is a palindrome
@@ -44,10 +39,10 @@ int check_palindrome(char *s, int length, int x)
  */
 int is_palindrome(char *s)
 {
-	unsigned int length = _strlen(s);
+	unsigned int length = _strlen_recursion(s) - 1;
 
 	if (*s == '\0')
 		return (1);
 
-	return (check_palindrome(s, length, 1));
+	return (check_palindrome(s, length));
 }
