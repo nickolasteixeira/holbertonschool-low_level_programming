@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 	unsigned int i, counter;
-	(void)*argv;	
+	(void)*argv;
 
 	i = 1;
 	counter = 0;
