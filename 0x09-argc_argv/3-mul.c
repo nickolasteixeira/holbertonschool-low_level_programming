@@ -9,13 +9,18 @@
  */
 int check_arguments(char *arg_v)
 {
-	while (*arg_v != '\0')
+	unsigned int i = 0;
+
+	while (arg_v[i] != '\0')
 	{
-		if (!(*arg_v >= '0' && *arg_v <= '9'))
+		if (arg_v[i] == '-')
+			++i;
+
+		if (!(arg_v[i] >= '0' && arg_v[i] <= '9'))
 		{
 			return (1);
 		}
-		*(++arg_v);
+		++i;
 	}
 	return (0);
 }
@@ -29,7 +34,6 @@ int check_arguments(char *arg_v)
  */
 int main(int argc, char *argv[])
 {
-	unsigned int i;
 	int product;
 
 	if (argc != 3)
@@ -44,7 +48,6 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	i = 0;
 	product = 0;
 	product = atoi(argv[1]) * atoi(argv[2]);
 	printf("%d\n", product);
