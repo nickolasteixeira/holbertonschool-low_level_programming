@@ -32,11 +32,8 @@ char *_strdup(char *str)
 	length = _strlen(str);
 	s = malloc((length + 1) * sizeof(char));
 
-	if (*str == '\0')
-	{
-		s = NULL;
-		return (s);
-	}
+	if (s == NULL || str == NULL)
+		return (NULL);
 
 	i = 0;
 	while (str[i] != '\0')
