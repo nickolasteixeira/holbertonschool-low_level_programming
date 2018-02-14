@@ -28,31 +28,35 @@ int _strlen(char *s)
 char *str_concat(char *s1, char *s2)
 {
 	char *s;
-	int length1, length2, totalLength, i, j;
+	int length1, length2, totalLength, i;
+	
+	if (s1 == NULL)
+		s1 = "";
+	if (s1 == NULL)
+		s2 = "";
 
-	length2 = _strlen(s1);
-	length1 = _strlen(s2);
+	length1 = _strlen(s1);
+	length2 = _strlen(s2);
 	totalLength = length2 + length1 + 1;
 
 	s = malloc((totalLength) * sizeof(char));
 
 	if (s == NULL)
 		return (NULL);
-	
+
 	i = 0;
-	while (i < length1)
+	while (s1[i] != '\0')
 	{
 		s[i] = s1[i];
 		++i;
 	}
 
-	j = 0;
-	while (j < length2)
+	i = 0;
+	while (s2[i] != '\0')
 	{
-		s[i] = s2[j];
+		s[length1 + i] = s2[i];
 		++i;
-		++j;
 	}
-	s[i] = '\0';
+	s[length1 + i] = '\0';
 	return (s);
 }
