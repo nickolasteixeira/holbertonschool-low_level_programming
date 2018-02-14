@@ -28,6 +28,7 @@ char *_strdup(char *str)
 {
 	int length, i;
 	char *s;
+
 	if (str == NULL)
 		return (NULL);
 
