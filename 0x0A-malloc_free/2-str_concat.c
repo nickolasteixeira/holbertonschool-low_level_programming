@@ -34,19 +34,25 @@ char *str_concat(char *s1, char *s2)
 	length1 = _strlen(s2);
 	totalLength = length2 + length1 + 1;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
 	s = malloc((totalLength) * sizeof(char));
 
 	if (s == NULL)
 		return (NULL);
+	
 	i = 0;
-	while (s1[i] != '\0')
+	while (i < length1)
 	{
 		s[i] = s1[i];
 		++i;
 	}
 
 	j = 0;
-	while (s2[j] != '\0')
+	while (j < length2)
 	{
 		s[i] = s2[j];
 		++i;
