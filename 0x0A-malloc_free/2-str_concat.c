@@ -34,11 +34,6 @@ char *str_concat(char *s1, char *s2)
 	length1 = _strlen(s2);
 	totalLength = length2 + length1 + 1;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-
 	s = malloc((totalLength) * sizeof(char));
 
 	if (s == NULL)
