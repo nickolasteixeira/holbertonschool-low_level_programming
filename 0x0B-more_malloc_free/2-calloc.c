@@ -11,6 +11,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *grid;
+	unsigned int i;
 
 	/* Edge cases */
 	if (nmemb == 0 || size == 0)
@@ -21,5 +22,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (grid == NULL)
 		return (NULL);
 
+	i = 0;
+	while (i < nmemb)
+	{
+		*((int *)grid + i) = 0;
+		++i;
+	}
 	return (grid);
 }
