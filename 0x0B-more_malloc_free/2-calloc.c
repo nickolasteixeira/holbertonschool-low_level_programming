@@ -11,21 +11,24 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *grid;
+	char *s;
 	unsigned int i;
 
 	/* Edge cases */
-	if (nmemb == 0 || size == 0)
+	if (nmemb <= 0 || size <= 0)
 		return (NULL);
 
 	/* assigning memory from the heap using malloc */
-	grid = malloc(nmemb * size);
-	if (grid == NULL)
+	s = malloc(nmemb * size);
+	if (s == NULL)
 		return (NULL);
+
+	grid = s;
 
 	i = 0;
 	while (i < nmemb)
 	{
-		*((char *)grid + i) = 0;
+		s[i] = 0;
 		++i;
 	}
 	return (grid);
