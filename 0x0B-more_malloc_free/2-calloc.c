@@ -26,7 +26,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	grid = s;
 
 	i = 0;
-	while (i < nmemb)
+	while (i < (nmemb * size))
 	{
 		s[i] = 0;
 		++i;
