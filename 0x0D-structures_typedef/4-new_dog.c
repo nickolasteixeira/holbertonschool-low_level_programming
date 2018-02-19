@@ -30,17 +30,37 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *new_dog;
 	char *n;
 	char *o;
+	int i, length1, length2;
+
+	length1 = _strlen(name);
+	length2 = _strlen(owner);
 
 	new_dog = malloc(sizeof(struct dog_t));
 	if (new_dog == NULL)
 		return (NULL);
 
-	n = malloc(_strlen(name) * sizeof(char));
-	o = malloc(_strlen(owner) * sizeof(char));
+	n = malloc((length1 * sizeof(char)) + 1);
+	o = malloc((length2 * sizeof(char)) + 1);
 	if (n == NULL)
 		return (NULL);
 	if (o == NULL)
 		return (NULL);
+
+	i = 0;
+	while (i < length1)
+	{
+		n[i] = name[i];
+		++i;
+	}
+	n[i] = '\0';
+
+	i = 0;
+	while (i < length2)
+	{
+		o[i] = owner[i];
+		++i;
+	}
+	o[i] = '\0';
 
 	new_dog->name = n;
 	new_dog->age = age;
