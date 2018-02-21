@@ -27,14 +27,14 @@ int main(int argc, char *argv[])
 			&& argv[2][0] != '%')
 	{
 		printf("Error\n");
-		exit(98);
+		exit(99);
 	}
 
 	if ((argv[2][0] == '/' && argv[3][0] == '0')
 			|| (argv[2][0] == '%' && argv[3][0] == '0'))
 	{
 		printf("Error\n");
-		exit(98);
+		exit(100);
 	}
 
 	a = atoi(argv[1]);
