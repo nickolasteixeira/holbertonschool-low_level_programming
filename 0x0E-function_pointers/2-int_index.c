@@ -14,6 +14,9 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 	int i, check;
 
+	if (array == NULL || comp == NULL)
+		return (-1);
+
 	/* edge case */
 	if (size <= 0)
 		return (-1);
