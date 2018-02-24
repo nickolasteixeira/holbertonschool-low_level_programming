@@ -8,14 +8,19 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
-typedef struct dtypes 
+/**
+ * struct dtypes - description of dtypes
+ * @c: character pointer
+ * @f: function pointer
+ */
+typedef struct dtypes
 {
 	char *c;
 	void (*f)();
 } all_list;
 
-void print_c();
-void print_i();
-void print_f();
-void print_s();
+void print_c(void);
+void print_i(void);
+void print_f(void);
+void print_s(void);
 #endif /* _VARIADIC_FUNCTIONS_H_ */
