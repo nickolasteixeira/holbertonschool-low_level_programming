@@ -19,8 +19,8 @@ typedef struct dtypes
 	void (*f)();
 } all_list;
 
-void print_c(void);
-void print_i(void);
-void print_f(void);
-void print_s(void);
+void print_c(va_list list);
+void print_i(va_list list);
+void print_f(va_list list);
+void print_s(va_list list);
 #endif /* _VARIADIC_FUNCTIONS_H_ */
