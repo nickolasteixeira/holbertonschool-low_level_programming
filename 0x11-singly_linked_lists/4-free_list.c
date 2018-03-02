@@ -2,6 +2,12 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+/**
+ * free_list - free all the memory from malloc in your linked list
+ * @head: starting point from your linked list
+ *
+ * Return: void
+ */
 void free_list(list_t *head)
 {
 	if (head == NULL)
