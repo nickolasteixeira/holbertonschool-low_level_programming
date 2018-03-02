@@ -7,7 +7,7 @@
  * @head: the head of the link list
  * @str: the string to add to the structure
  *
- * @Return: the head
+ * Return: the head
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
