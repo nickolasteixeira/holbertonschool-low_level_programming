@@ -22,7 +22,6 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	if (copy == NULL)
 	{
 		*head = new;
-		return (*head);
 	}
 	else
 	{
@@ -31,8 +30,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 			copy = copy->next;
 		}
 		copy->next = new;
-		return (*head);
 	}
 
-	return (*head);
+	return (new);
 }
