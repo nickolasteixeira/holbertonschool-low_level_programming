@@ -32,12 +32,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	while (counter < (idx - 1))
 	{
-		if (copy == NULL)
-		{
-			free(new);
-			return (NULL);
-		}
 		copy = copy->next;
+		if (copy == NULL)
+			return (NULL);
 		++counter;
 	}
 	after = copy->next;
