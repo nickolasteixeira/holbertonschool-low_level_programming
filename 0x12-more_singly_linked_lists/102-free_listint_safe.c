@@ -10,10 +10,10 @@ size_t free_listint_safe(listint_t **h)
 {
 	size_t nodes, nodes_copy;
 	listint_t *copy, *head_copy, *copy2;
-	
+
 	head_copy = *h;
 	nodes = 0;
-	
+
 	while (head_copy != NULL)
 	{
 		++nodes;
@@ -28,14 +28,14 @@ size_t free_listint_safe(listint_t **h)
 			if (head_copy == copy)
 			{
 				*h = NULL;
-				return(nodes);
+				return (nodes);
 			}
 			copy = copy->next;
 			++nodes_copy;
 		}
-		
+
 	}
-	
+
 	*h = NULL;
-	return (nodes);	
+	return (nodes);
 }
