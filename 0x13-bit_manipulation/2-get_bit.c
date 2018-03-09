@@ -13,11 +13,14 @@ int get_bit(unsigned long int n, unsigned int index)
 	mask = 1;
 	mask = mask << index;
 
-	if (n == 0 && index == 0)
-		return (0);
+	if (n > 4294967295)
+		return (-1);
 
 	if (index >= n)
 		return (-1);
+
+	if (n == 0 && index == 0)
+		return (0);
 
 	if (mask & n)
 		return (1);
