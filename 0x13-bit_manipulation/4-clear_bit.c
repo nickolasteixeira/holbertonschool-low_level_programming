@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * clear_bit - function that sets the value of a bit to 0 at a given index
  * @n: the integer to change
@@ -18,7 +19,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 		return (-1);
 
 	if (n == NULL)
-		return (NULL);
+		return (-1);
 	*n = ~*n;
 	*n = *n | mask << index;
 	*n = ~*n;
