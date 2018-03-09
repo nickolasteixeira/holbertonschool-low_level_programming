@@ -18,8 +18,9 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	if (index > maxsize)
 		return (-1);
 
-	if (n == NULL)
+	if (*n == '\0')
 		return (-1);
+
 	*n = ~*n;
 	*n = *n | mask << index;
 	*n = ~*n;
