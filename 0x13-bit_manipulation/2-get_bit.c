@@ -9,18 +9,14 @@
 int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned long int mask;
+	unsigned int maxsize;
 
+	maxsize = sizeof(n) * 8;
 	mask = 1;
 	mask = mask << index;
 
-	if (n > 4294967295)
+	if (index > maxsize)
 		return (-1);
-
-	if (index >= n)
-		return (-1);
-
-	if (n == 0 && index == 0)
-		return (0);
 
 	if (mask & n)
 		return (1);
