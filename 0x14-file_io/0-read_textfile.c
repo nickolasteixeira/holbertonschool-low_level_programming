@@ -32,7 +32,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	/* open the filename, set it to Read Only */
-	fd = open(filename, O_RDONLY);
+	fd = open(filename, O_RDONLY, S_IRUSR);
 	if (fd < 0)
 		return (0);
 
