@@ -1,16 +1,5 @@
 #include "holberton.h"
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-/**
  * read_textfile - function that reads a text file and prints it to the POSIX
  * standard output
  * @filename: name of the file to read and print
@@ -21,7 +10,6 @@ int _putchar(char c)
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t fd, actual_read;
-	size_t i;
 	char *buff;
 
 	if (filename == NULL)
@@ -39,15 +27,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	/* copying all the contents in filename to the buff up to the letters */
 	actual_read = read(fd, buff, letters);
+	if (actual_read == -1)
+		return (0);
 
-	/*looping through and printing them to the console */
-	i = 0;
-	while (i < letters)
-	{
-		_putchar(buff[i]);
-		++i;
-	}
-
+	buff[actual_read] = '\0';
+	write(STDOUT_FILENO, buff, actual_read); 
 	close(fd);
 	free(buff);
 	return (actual_read);
