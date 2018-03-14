@@ -39,7 +39,7 @@ void print_error_100(int fd)
  */
 void read_a_textfile(char *file_from, char *file_to)
 {
-	int fd_to, fd_from, actual_read;
+	int fd_to, fd_from, actual_read, actual_write;
 	char buff[1024];
 
 	fd_from = open(file_from, O_RDONLY);
@@ -57,8 +57,8 @@ void read_a_textfile(char *file_from, char *file_to)
 		if (actual_read == -1)
 			print_error_98(file_from);
 		/* writing to the filename you wanted to create at 1024 bytes at a time */
-		actual_read = write(fd_to, buff, actual_read);
-		if (actual_read == -1)
+		actual_write = write(fd_to, buff, actual_read);
+		if (actual_write == -1)
 			print_error_99(file_to);
 	}
 	/*checking if the condition statement for the while loop errors */
