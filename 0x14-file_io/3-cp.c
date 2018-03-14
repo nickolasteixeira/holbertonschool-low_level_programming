@@ -27,7 +27,7 @@ void print_error_99(char *file_to)
  */
 void print_error_100(int fd)
 {
-	dprintf(STDERR_FILENO, "Can't close fd %d\n", fd);
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 	exit(100);
 }
 /**
