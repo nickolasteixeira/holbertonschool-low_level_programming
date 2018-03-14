@@ -55,7 +55,6 @@ int read_a_textfile(char *file_from, char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
 		exit(100);
 	}
-	/* freeing the buffer from the heap */
 	return (1);
 }
 /**
@@ -67,10 +66,9 @@ int read_a_textfile(char *file_from, char *file_to)
  */
 int main(int argc, char **argv)
 {
-
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp %s %s", argv[1], argv[2]);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
