@@ -21,7 +21,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	new->n = n;
 	/* link to insert is the head*/
-	if (idx == 0)
+	if (!idx)
 	{
 		new->prev = NULL;
 		new->next = *h;
@@ -29,7 +29,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = new;
 		return (new);
 	}
-
 	/* link to insert is NOT at head or tail */
 	count = 0;
 	copy = *h;
