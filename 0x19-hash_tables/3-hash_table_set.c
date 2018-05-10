@@ -1,6 +1,13 @@
 #include "hash_tables.h"
 #include <stdio.h>
-
+/**
+ * hash_table_set - sets a value for a hash table
+ * @ht: hash table
+ * @key: key string to add
+ * @value: value to add
+ *
+ * Return: 1 if successful, 0 if not
+ */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
