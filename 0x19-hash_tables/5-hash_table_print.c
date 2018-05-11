@@ -16,13 +16,10 @@ void hash_table_print(const hash_table_t *ht)
 	while(index < ht->size)
 	{
 		runner = ht->array[index];
-		if (runner)
+		while(runner)
 		{
-			while(runner)
-			{
-				printf("'%s': '%s', ", runner->key, runner->value);
-				runner = runner->next;
-			}
+			printf("'%s': '%s', ", runner->key, runner->value);
+			runner = runner->next;
 		}
 		++index;
 	}
