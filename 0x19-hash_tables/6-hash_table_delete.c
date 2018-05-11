@@ -1,16 +1,16 @@
 #include "hash_tables.h"
 #include <stdlib.h>
 /**
+ * hash_table_delete - delets the entire hash table
+ * @ht: pointer to the hash table
  *
- *
- *
- *
+ * Return: void
  */
 void hash_table_delete(hash_table_t *ht)
 {
 	unsigned int index;
 	hash_node_t *runner, *temp;
-	
+
 	index = 0;
 	while (index < ht->size)
 	{
