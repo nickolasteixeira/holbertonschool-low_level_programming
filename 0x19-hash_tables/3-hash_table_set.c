@@ -27,29 +27,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			if (strcmp(head->key, key) == 0)
 			{
+				free(head->value);
 				head->value = strdup(value);
 				return (1);
 			}
 			head = head->next;
 		}
-		new_node = malloc(sizeof(hash_node_t));
-		if (new_node == NULL)
-			return (0);
-		new_node->key = strdup(key);
-		if (new_node->key == NULL)
-		{
-			free(new_node);
-			return (0);
-		}
-		new_node->value = strdup(value);
-		if (new_node->value == NULL)
-		{
-			free(new_node);
-			return (0);
-		}
-		new_node->next = ht->array[index];
-		ht->array[index] = new_node;
-		return (1);
 	}
 
 	new_node = malloc(sizeof(hash_node_t));
@@ -67,7 +50,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		free(new_node);
 		return (0);
 	}
-	new_node->next = NULL;
+
+	if (ht->array[index])
+		new_node->next = ht->array[index];
+	else
+		new_node->next = NULL;
 	ht->array[index] = new_node;
 	return (1);
 }
