@@ -30,7 +30,7 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			printf("'%s': '%s'", runner->key, runner->value);
 			if (runner != last_node)
-				printf(",");
+				printf(", ");
 			runner = runner->next;
 		}
 		++index;
