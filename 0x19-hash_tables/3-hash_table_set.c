@@ -33,7 +33,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		new_node = malloc(sizeof(hash_node_t));
 		if (new_node == NULL)
 			return (0);
-		printf("Index: %lu\n", index);
 		new_node->key = strdup(key);
 		if (new_node->key == NULL)
 		{
@@ -68,6 +67,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	new_node->next = NULL;
 	ht->array[index] = new_node;
-	printf("New Index: %lu\n", index);
 	return (1);
 }
