@@ -8,5 +8,5 @@ An intro project on:
 ### Mandatory and Advanced:
 | **File** | **Description** |
 |----------|-----------------|
-| **[libholberton.a](libholberton.a)** | **[holberton.h](holberton.h)**Create the static library libholberton.a |
+| **[libholberton.a](libholberton.a)** , **[holberton.h](holberton.h)** | Create the static library libholberton.a |
 | **[create_static_lib.sh](create_static_lib.sh)** | Create a script called create_static_lib that creates a static library called liball.a from all the .c files that are in the current directory |
