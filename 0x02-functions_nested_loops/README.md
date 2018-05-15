@@ -1,4 +1,3 @@
-URL you want to scrape: https://intranet.hbtn.io/projects/214
 # 0x02. C - Functions, nested loops
 ## About
 An intro project on:
