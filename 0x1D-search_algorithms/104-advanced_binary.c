@@ -22,10 +22,10 @@ void print_numbers(int *array, size_t beg, size_t end)
 		printf("%u", array[beg]);
 		if (beg != end)
 			printf(", ");
+		if (beg == end)
+			printf("\n");
 		++beg;
 	}
-	if (i <= end)
-		printf("\n");
 }
 /**
  * s_binary - binary search
@@ -44,12 +44,12 @@ int s_binary(int *array, size_t beg, size_t end, int value)
 	if (end >= beg)
 	{
 		mid = beg + (end - beg) / 2;
-		if (value == array[mid])
+		if ((mid == 0 || value > array[mid - 1]) && value == array[mid])
 			return (mid);
-		else if (value < array[mid])
-			return (s_binary(array, beg, mid - 1, value));
 		else if (value > array[mid])
 			return (s_binary(array, mid + 1, end, value));
+		else
+			return (s_binary(array, beg, mid, value));
 	}
 	return (-1);
 }
