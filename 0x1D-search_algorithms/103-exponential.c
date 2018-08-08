@@ -20,11 +20,10 @@ void print_numbers(int *array, unsigned int beg, unsigned int end)
 		printf("%u", array[beg]);
 		if (beg != end)
 			printf(", ");
+		if (beg == end)
+			printf("\n");
 		beg += 1;
 	}
-
-	if (i <= end)
-		printf("\n");
 }
 /**
  * exp_bin_search - exponential search
