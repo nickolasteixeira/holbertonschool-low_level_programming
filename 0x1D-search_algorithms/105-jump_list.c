@@ -41,7 +41,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		return (NULL);
 
 	temp = list, jump = sqrt(size), i = 0, found = 0;
-	while (i < size)
+	while (temp)
 	{
 		j_temp = temp;
 		pass = jump_check(j_temp, jump);
@@ -80,7 +80,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 			while (temp)
 			{
 				printf("Value checked at index [%lu] = [%u]\n", temp->index, temp->n);
-				if (temp == NULL)
+				if (temp->next == NULL)
 					return (NULL);
 				if (value == temp->n)
 					return (temp);
