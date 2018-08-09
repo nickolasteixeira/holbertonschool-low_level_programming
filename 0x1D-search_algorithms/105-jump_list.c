@@ -63,7 +63,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 				j = 0;
 				while (j < jump)
 				{
-					printf("Value check at index [%lu] = [%u]\n", j_temp->index, j_temp->n);
+					printf("Value checked at index [%lu] = [%u]\n", j_temp->index, j_temp->n);
 					if (value == j_temp->n)
 						return (j_temp);
 					j_temp = j_temp->next;
@@ -79,7 +79,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 			printf("Value found between indexes [%lu] = [%lu]\n", temp->index, j_temp->index);
 			while (temp)
 			{
-				printf("Value check at index [%lu] = [%u]\n", temp->index, temp->n);
+				printf("Value checked at index [%lu] = [%u]\n", temp->index, temp->n);
 				if (temp == NULL)
 					return (NULL);
 				if (value == temp->n)
