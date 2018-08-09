@@ -16,7 +16,7 @@ int find_value(int *array, unsigned int i, unsigned int end, int v, size_t s)
 	while (i <= end)
 	{
 		printf("Value checked array[%u] = [%u]\n", i, array[i]);
-		if (i + 1 >= s)
+		if (i >= s)
 			return (-1);
 		if (v == array[i])
 			return (i);
